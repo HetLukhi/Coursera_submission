@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wanderlust Explorer · Home</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="brand" href="index.html">Wanderlust Explorer</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <h1>Find your next unforgettable trip.</h1>
+      <p>
+        Welcome to <strong>Wanderlust Explorer</strong> — discover destinations tailored to your preferences.
+        Explore peaceful <em>beaches</em>, stunning <em>temples</em>, and hand‑picked spots by <em>country</em>.
+      </p>
+    </section>
+
+    <section class="controls card">
+      <h2>Get personalized recommendations</h2>
+      <form id="recommendation-form">
+        <div class="row">
+          <label for="category">Category</label>
+          <select id="category" name="category" required>
+            <option value="Beach">Beach</option>
+            <option value="Temple">Temple</option>
+            <option value="Country">Country</option>
+          </select>
+        </div>
+
+        <div class="row" id="country-row" style="display:none;">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="Japan">Japan</option>
+            <option value="Italy">Italy</option>
+            <option value="India">India</option>
+            <option value="Indonesia">Indonesia</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="keyword">Keyword (optional)</label>
+          <input id="keyword" name="keyword" type="text" placeholder="Try: Kyoto, Bali, Goa…" />
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Recommend</button>
+          <button type="button" id="show-all" class="btn">Show All</button>
+          <button type="reset" class="btn ghost">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="results">
+      <h2>Recommendations</h2>
+      <div id="cards" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Wanderlust Explorer · Built with vanilla JavaScript</p>
+    </div>
+  </footer>
+</body>
+</html>
